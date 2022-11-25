@@ -19,9 +19,15 @@
             </intent-filter>
         </activity>
         <service android:name=".IRemoteService"
-            android:process=":remote"
-            android:exported="true"
-            />
+
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.imooc_606.IRemoteService"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+        </service>
     </application>
 
 </manifest>

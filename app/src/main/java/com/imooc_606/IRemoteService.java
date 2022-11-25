@@ -27,4 +27,17 @@ public class IRemoteService extends Service {
     public IBinder onBind(Intent intent) {
         return iiMoocAidl.asBinder();
     }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        Log.e(TAG,"IRemoteService  onCreate");
+    }
+
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        Log.e(TAG,"IRemoteService  onStartCommand");
+        return super.onStartCommand(intent, flags, startId);
+    }
 }
